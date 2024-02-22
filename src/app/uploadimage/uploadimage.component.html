@@ -1,0 +1,9 @@
+<p>Uploading Image in Angular</p>
+<div>
+    <label>Upload Image:</label>
+    <input type="file" (change)="onFileSelected($event)" />
+    <div *ngIf="imageUrl">
+        <p>Your uploaded Image :</p>
+        <img [src]="imageUrl" alt="Image" style="width:auto;">
+    </div>
+</div>

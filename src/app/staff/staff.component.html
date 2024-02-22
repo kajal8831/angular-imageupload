@@ -1,0 +1,21 @@
+<p>staff works!</p>
+<table border="2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of staffs">
+            <td>{{item.ID}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Gender}}</td>
+            <td>{{item.Age}}</td>
+            <td>{{item.City}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+<h1>Homes</h1>
+<section>
+    <app-housinglocation 
+    *ngFor="let housingLocation of housingLocationList"
+    [housinglocation] ="housingLocation"
+    (contactEvent) = "showContact($event)">
+    </app-housinglocation>
+</section>
+<div class="popup" *ngIf="isPopupVisible">
+    <div class="popup-content">
+      <!-- Your popup content goes here -->
+        <span>Dealer Name: {{contacts.dealerName}}</span><br/>
+        <span>Mobile Number: {{contacts.mobileNumber}}</span><br/>
+        <span>City: {{contacts.city}}</span><br/>
+        <button (click)="closePopup()">Close</button>
+    </div>
+</div>
+<div>
+    <h2>Observable Example</h2>
+    <button (click)="CheckObservable()">CheckObservable</button>
+    <p>{{ data | json }}</p>
+</div>
+<div>
+    <h2>Promise Example</h2>
+    <button (click)="CheckPromise()">CheckPromise</button>
+    <p>{{ results | json }}</p>
+</div>
+<style>
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+    }
+
+    .popup-content {
+      /* Add styling for your popup content */
+    }
+</style>

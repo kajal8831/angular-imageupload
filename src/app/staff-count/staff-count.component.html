@@ -1,1 +1,11 @@
 <p>staff-count works!</p>
+<p>Total Staff : {{staffCount}}</p>
+<p>Male Count : {{maleStaffCount}}</p>
+<p>Female Count : {{femaleStaffCount}}</p>
+
+<input type="radio" name="gender" value="All" (change)="PassSelectedValue('All')"/>
+<label for="gender">All</label>
+<input type="radio" name="gender" value="Male" (change)="PassSelectedValue('Male')"/>
+<label for="gender">Male</label>
+<input type="radio" name="gender" value="Female" (change)="PassSelectedValue('Female')"/>
+<label for="gender">Female</label>

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SaveimageService } from './saveimage.service';
+import { ApartmentsService } from './apartments.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ import { SaveimageService } from './saveimage.service';
   imports: [CommonModule, RouterOutlet,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers:  [ SaveimageService ]
+  providers:  [ SaveimageService, ApartmentsService ]
 })
+
 export class AppComponent {
   title = 'my-angular-app';
 }
